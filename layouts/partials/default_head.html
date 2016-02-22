@@ -3,7 +3,6 @@
   <head>
     <meta charset="utf-8">
     {{ .Hugo.Generator }}
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
     <link rel='stylesheet' href='//fonts.googleapis.com/css?family=Open+Sans|Marcellus+SC'>
     <link rel="stylesheet" href="/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
@@ -26,11 +25,8 @@
     <meta property="og:url" content="{{ .Permalink }}">
     {{ with .Description }}<meta name="description" content="{{ . }}">{{ end }}
     {{ with .Params.image }}<meta property="og:image" content="{{ $.Site.BaseURL }}/images/{{ . }}">{{ end }}
-
   </head>
-
   <body>
-
     <header class="site">
       <nav class="navbar navbar-default">
         <div class="container">
@@ -43,7 +39,6 @@
             </button>
             <a class="navbar-brand" href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a>
           </div>
-
           <div id="navbar" class="collapse navbar-collapse">
             {{ range .Site.Menus }}
             <ul class="nav navbar-nav navbar-right">
@@ -64,11 +59,8 @@
             </ul>
             {{ end }}
           </div>
-
         </div>
       </nav>
     </header>
-
     <div class="site">
       <div class="container">
-
