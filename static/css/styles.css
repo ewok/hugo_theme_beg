@@ -22,7 +22,7 @@ body {
 
 a {
   transition-duration: .2s;
-  color: #000;
+  /* color: #337ab7; */
 }
 
 a:hover,
