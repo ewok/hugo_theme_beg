@@ -1,6 +1,17 @@
 
 <aside class="site">
 
+    {{ if isset $.Site.Params "GoogleCS" }}
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h2 class="panel-title">Search</h2>
+    </div>
+    <div class="list-group">
+        <gcse:search>
+    </div>
+  </div>
+  {{ end }}
+
   <div class="panel panel-default">
     <div class="panel-heading">
       <h2 class="panel-title">LatestPosts</h2>
