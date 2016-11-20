@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
+<<<<<<< HEAD:layouts/partials/default_head.html
     <meta charset="utf-8">
     {{ .Hugo.Generator }}
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
@@ -25,9 +26,26 @@
     <meta property="og:url" content="{{ .Permalink }}">
     {{ with .Description }}<meta name="description" content="{{ . }}">{{ end }}
     {{ with .Params.image }}<meta property="og:image" content="{{ $.Site.BaseURL }}/images/{{ . }}">{{ end }}
+=======
+    {{ partial "meta.html" . }}
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/styles/solarized_dark.min.css">
+    <title>{{ block "title" . }}{{ end }}{{ .Site.Title }}</title>
+    {{ block "meta" . }}{{ end }}
+    <link href="{{ .Site.BaseURL }}css/styles.css" rel="stylesheet">
+>>>>>>> dim0627-master:layouts/_default/baseof.html
   </head>
   <body>
+<<<<<<< HEAD:layouts/partials/default_head.html
     <header class="site">
+=======
+    {{ if ne (getenv "HUGO_ENV") "DEV" }}
+    {{ template "_internal/google_analytics.html" . }}
+    {{ end }}
+
+    <header class="l-header">
+>>>>>>> dim0627-master:layouts/_default/baseof.html
       <nav class="navbar navbar-default">
         <div class="container">
           <div class="navbar-header">
@@ -39,6 +57,11 @@
             </button>
             <a class="navbar-brand" href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a>
           </div>
+<<<<<<< HEAD:layouts/partials/default_head.html
+=======
+
+          {{ if ne (len .Site.Menus) 0 }}
+>>>>>>> dim0627-master:layouts/_default/baseof.html
           <div id="navbar" class="collapse navbar-collapse">
             {{ range .Site.Menus }}
             <ul class="nav navbar-nav navbar-right">
@@ -59,8 +82,40 @@
             </ul>
             {{ end }}
           </div>
+<<<<<<< HEAD:layouts/partials/default_head.html
         </div>
       </nav>
     </header>
     <div class="site">
       <div class="container">
+=======
+          {{ end }}
+
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <div class="container">
+        {{ block "main" . }}{{ end }}
+      </div>
+    </main>
+
+    <footer class="l-footer">
+      <div class="container">
+        <p>{{ with .Site.Copyright }}{{ . | safeHTML }}{{ else }}<span class="h-logo">&copy; {{ .Site.Title }}</span>{{ end }}</p>
+        <aside>
+          <p>Powered by <a href="https://gohugo.io/">Hugo</a>.</p>
+          <p><a href="https://github.com/dim0627/hugo_theme_beg">Beg</a> designed by <a href="http://yet.unresolved.xyz/">Daisuke Tsuji</a>.</p>
+        </aside>
+      </div>
+    </footer>
+
+    <script src="//code.jquery.com/jquery-3.1.1.min.js"></script>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+  </body>
+</html>
+
+>>>>>>> dim0627-master:layouts/_default/baseof.html

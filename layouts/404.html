@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 {{ partial "default_head.html" . }}
 
 <section id="main">
@@ -7,3 +8,12 @@
 </section>
 
 {{ partial "default_foot.html" . }}
+=======
+{{ define "title" }}{{ if not .IsHome }}{{ .Title }} - {{ end }}{{ end }}
+
+{{ define "main" }}
+<header class="page-header">
+  <h1>{{ .Title }}</h1>
+</header>
+{{ end }}
+>>>>>>> dim0627-master

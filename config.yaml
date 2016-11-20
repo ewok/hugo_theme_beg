@@ -1,23 +1,22 @@
-BaseUrl: "http://example.com"
+BaseUrl: "http://yet.unresolved.xyz/hugo_theme_beg"
 LanguageCode: "en-us"
-Title: "Aglaus"
+Title: "Beg"
 
 Params:
-  Author: "Your name."
+  Author: "Daisuke Tsuji"
   DateForm: "Mon, Jan 2, 2006"
-  GoogleAnalyticsUserID: "Your ID."
-  Facebook: "Your ID."
-  Twitter: "Your ID."
-  Github: "Your ID."
+  GoogleAnalyticsUserID: "UA-55005303-5"
+  Facebook: "daisuke.tsuji.735"
+  Twitter: "dim0627"
+  Github: "dim0627"
   ShowRelatedPost: True
-  Disqus: "Your Disqus."
-  SyntaxHighlightTheme: "solarized_dark.min.css"
+  Disqus: "unresolved"
+  SyntaxHighlightTheme: "github.min.css"
 
 Indexes:
   tag: "tags"
 
 permalinks:
-  post: /blog/:year/:month/:day/:title/
+  post: /blog/:year/:month/:day/:slug/
 
 MetadataFormat: "yaml"
-
